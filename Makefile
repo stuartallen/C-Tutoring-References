@@ -22,6 +22,7 @@ compile = g++ -std=c++11
 	recompile if there dependencies (the files after the\
 	colon) are changed. If point_ref_example.cpp is		\
 	changed then the executable will recompile. I don't	\
-	think they actually teach you this in class
-$(point_ref_exe_name): point_ref.cpp
+	think they actually teach you this in class			\
+	To compile this write "make point_ref"
+point_ref: point_ref.cpp
 	$(compile) point_ref.cpp -o $(point_ref_exe_name)
