@@ -14,10 +14,12 @@
 #	variable shows we will compile using g++ and using	
 #	C++ 11
 POINT_REF_EXE_NAME = point_ref_exe
+MEM_ALLOC = mem_alloc_exe
+SIMPLE_CLASS_EXE_NAME = simple_class_exe
 COMPILE = g++ -std=c++11
 
 #	These two lines make an executable file with the 	
-##	same name as the point_ref_exe_name variable. 		
+#	same name as the point_ref_exe_name variable. 		
 #	Makefiles work in such a way that they will only 	
 #	recompile if there dependencies (the files after the
 #	colon) are changed. If point_ref_example.cpp is		
@@ -26,4 +28,10 @@ COMPILE = g++ -std=c++11
 #	To compile this write "make point_ref"
 $(POINT_REF_EXE_NAME): point_ref.cpp
 	$(COMPILE) point_ref.cpp -o $(POINT_REF_EXE_NAME)
-mem_alloc: 
+$(MEM_ALLOC): mem_alloc.cpp
+	$(COMPILE) mem_alloc.cpp -o $(MEM_ALLOC)
+
+#	Clean gets rid of all executables and any .o files.
+#	This will make the computer recompile everything
+clean:
+	rm -f $(POINT_REF_EXE_NAME) $(MEM_ALLOC) $(SIMPLE_CLASS_EXE_NAME) *.o
