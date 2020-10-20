@@ -16,6 +16,8 @@
 POINT_REF_EXE_NAME = point_ref_exe
 MEM_ALLOC = mem_alloc_exe
 SIMPLE_CLASS_EXE_NAME = simple_class_exe
+BIG_3_EXE_NAME = big_3_exe
+
 COMPILE = g++ -std=c++11
 
 #	These two lines make an executable file with the 	
@@ -32,6 +34,8 @@ $(MEM_ALLOC): mem_alloc.cpp
 	$(COMPILE) mem_alloc.cpp -o $(MEM_ALLOC)
 $(SIMPLE_CLASS_EXE_NAME): classes_example.cpp
 	$(COMPILE) classes_example.cpp -o $(SIMPLE_CLASS_EXE_NAME)
+$(BIG_3_EXE_NAME): big_three.cpp
+	$(COMPILE) big_three.cpp -o $(BIG_3_EXE_NAME)
 
 #	Clean gets rid of all executables and any .o files.
 #	This will make the computer recompile everything
