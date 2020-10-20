@@ -30,6 +30,8 @@ $(POINT_REF_EXE_NAME): point_ref.cpp
 	$(COMPILE) point_ref.cpp -o $(POINT_REF_EXE_NAME)
 $(MEM_ALLOC): mem_alloc.cpp
 	$(COMPILE) mem_alloc.cpp -o $(MEM_ALLOC)
+$(SIMPLE_CLASS_EXE_NAME): classes_example.cpp
+	$(COMPILE) classes_example.cpp -o $(SIMPLE_CLASS_EXE_NAME)
 
 #	Clean gets rid of all executables and any .o files.
 #	This will make the computer recompile everything

@@ -24,7 +24,7 @@ class Child : public Parent {
 	public:
 		/*	Why can't the child print priv?*/
 		void print() {
-			printf("prot: %d pub: %d", prot, pub);
+			printf("\nprot: %d pub: %d\n", prot, pub);
 		}
 };
 
@@ -37,9 +37,15 @@ int main() {
 	/* But not this? */
 	//dad.priv = 4; dad.prot = 8;
 
+	/* Why can I do this */
+	son.pub = 7;
+	/* But not this? */
+	//son.priv = 4; son.prot = 8;
+
 	/*	does the parent function	*/
 	dad.print();
 
 	/*	does the child function		*/
 	son.print();
+
 }
